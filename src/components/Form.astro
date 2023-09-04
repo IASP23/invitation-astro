@@ -1,21 +1,32 @@
-<form class="form">
+<form class="form" method="POST" id="MiFormulario">
   <p class="text-2xl text-white p-5">Confirma tu Asistencia</p>
   <div class="field">
-    <input placeholder="Nombre" class="input-field" type="text" />
+    <input
+      placeholder="Nombre"
+      name="Nombres"
+      class="input-field"
+      type="text"
+    />
   </div>
   <div class="field">
-    <input placeholder="Teléfono" class="input-field" type="text" />
+    <input
+      placeholder="Teléfono"
+      name="Telefono"
+      class="input-field"
+      type="text"
+    />
   </div>
 
-  <select class="field">
-    <option value="0">Confirmación</option>
-    <option value="1">Asistiré</option>
-    <option value="2">No podré asistir</option>
+  <select class="field" id="opcion" name="Confirmacion">
+    <option value="" disabled selected>Confirmación</option>
+    <option value="Sí, asistiré">Sí, asistiré</option>
+    <option value="No podré asistir">No podré asistir</option>
   </select>
 
-  <textarea class="field resize-none" placeholder="Mensaje"></textarea>
+  <textarea class="field resize-none" name="Mensaje" placeholder="Mensaje"
+  ></textarea>
 
-  <button class="button3">Enviar</button>
+  <button class="button3" type="submit">Enviar</button>
 </form>
 
 <style>
@@ -117,3 +128,31 @@
     color: white;
   }
 </style>
+
+<script>
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbyNWAVEBur-3NCmkS_erKQZzsAcbjZAYpr-ovU99tz6C1MWqSMkzruN9mr9s8J6mL-P/exec";
+
+  const formulario = document.getElementById("MiFormulario") as HTMLFormElement;
+
+  formulario.addEventListener("submit", (e) => {
+    const seleccion = (document.getElementById("opcion") as HTMLInputElement)
+      .value;
+
+    console.log(seleccion);
+    if (seleccion === "") {
+      alert(
+        "Por favor, selecciona una opción válida en el campo de Confirmación."
+      );
+      e.preventDefault(); // Evita que el formulario se envíe si no se ha seleccionado una opción válida
+    }
+
+    e.preventDefault();
+    fetch(scriptUrl, { method: "POST", body: new FormData(formulario) })
+      .then(() => alert("Your form is submitted successfully "))
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => console.error("Error", err.message));
+  });
+</script>
