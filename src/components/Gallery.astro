@@ -1,0 +1,42 @@
+---
+import Photo from "./Photo.astro";
+
+const photos = [
+  { title: "/anillos.jpg", img: "/anillos.jpg" },
+  { title: "/beso.jpg", img: "/beso.jpg" },
+  { title: "/ceremonia.jpg", img: "/ceremonia.jpg" },
+  { title: "/flores.jpg", img: "/flores.jpg" },
+  { title: "/pareja.jpg", img: "/pareja.jpg" },
+  { title: "/pastel.jpg", img: "/pastel.jpg" },
+  { title: "/ramo.jpg", img: "/ramo.jpg" },
+  { title: "/tacos.jpg", img: "/tacos.jpg" },
+  { title: "/velas.jpg", img: "/velas.jpg" },
+  { title: "/vestido.jpg", img: "/vestido.jpg" },
+];
+---
+
+<div class="flex flex-nowrap p-4 bg-black">
+  <div class="flex-auto">
+    {
+      photos.slice(0, 4).map(({ title, img }) => {
+        return <Photo title={title} src={img} />;
+      })
+    }
+  </div>
+
+  <div class="flex-auto">
+    {
+      photos.slice(5, 8).map(({ title, img }) => {
+        return <Photo title={title} src={img} />;
+      })
+    }
+  </div>
+
+  <div class="flex-auto">
+    {
+      photos.slice(8, 10).map(({ title, img }) => {
+        return <Photo title={title} src={img} />;
+      })
+    }
+  </div>
+</div>

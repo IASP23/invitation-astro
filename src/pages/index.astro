@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Form from "../components/Form.astro";
+import Timer from "../components/Timer.astro";
+import MusicReproducer from "../components/MusicReproducer.astro";
+import Gallery from "../components/Gallery.astro";
+---
+
+<Layout title="Boda">
+  <main class="m-auto py-4 text-center">
+    <h1
+      class="m-auto flex justify-center items-center text-5xl uppercase italic">
+      <img src="/Heart.png" alt="heart.png" class="contrast-150 sm:px-2" />
+      Bienvenidos a mi Boda
+      <img src="/Heart.png" alt="heart.png" class="contrast-150 sm:px-2" />
+    </h1>
+
+    <h2 class="text-2xl underline">Alice & David</h2>
+    <h2 class="text-2xl">
+      Están cordialmente invitados a la celebración de <span>nuestra boda</span>
+    </h2>
+  </main>
+
+  <div class="flex flex-col items-center justify-center m-auto p-12">
+    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+    <Timer />
+    <!--     MEJORAR EL GALLERY CARGA LENTA DE IMAGENES -->
+    <!-- <Gallery /> -->
+    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+
+    <Card title="Hola" body="Mundo" />
+    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+
+    <MusicReproducer />
+    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+    <Form />
+  </div>
+</Layout>
