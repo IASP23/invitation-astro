@@ -8,7 +8,7 @@ import Gallery from "../components/Gallery.astro";
 ---
 
 <Layout title="Boda">
-  <main class="m-auto py-4 text-center">
+  <main class="container py-10 m-auto text-center text-white">
     <h1
       class="m-auto flex justify-center items-center text-5xl uppercase font-bold">
       <img src="/Heart.png" alt="heart.png" class="contrast-150 sm:px-2" />
@@ -20,20 +20,39 @@ import Gallery from "../components/Gallery.astro";
     <h2 class="text-2xl">
       Están cordialmente invitados a la celebración de <span>nuestra boda</span>
     </h2>
+
+    <div class="flex justify-center items-center">
+      <img class="p-4 w-1/2 bg-cover" src="./amor.jpg" alt="love" />
+    </div>
   </main>
 
-  <div class="flex flex-col items-center justify-center m-auto p-12">
-    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+  <div class="flex flex-col items-center justify-center m-auto p-12 text-white">
+    <img class="filter grayscale invert" src="/loto.png" alt="loto" srcset="" />
     <Timer />
 
-    <!--   <Gallery /> -->
-    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+    <!--     <Gallery /> -->
+    <img
+      class="py-10 filter grayscale invert"
+      src="/loto.png"
+      alt="loto"
+      srcset=""
+    />
 
     <Card title="Hola" body="Mundo" />
-    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+    <img
+      class="py-10 filter grayscale invert"
+      src="/loto.png"
+      alt="loto"
+      srcset=""
+    />
 
     <MusicReproducer />
-    <img class="py-10" src="/loto.png" alt="loto" srcset="" />
+    <img
+      class="py-10 filter grayscale invert"
+      src="/loto.png"
+      alt="loto"
+      srcset=""
+    />
     <Form />
   </div>
 </Layout>
