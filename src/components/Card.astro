@@ -1,18 +1,29 @@
-<div class="flex gap-3 columns-2" style="height: 500px ;">
+---
+import CardHorario from "./CardHorario.astro";
+---
+
+<div class="flex gap-3 justify-center pb-2">
+  <CardHorario Act="Ceremonía" OClock="5 pm " />
+  <div class="w-1 bg-black h-{250px}" id="line_Vertical"></div>
+
   <div class="card text-center">
     <p class="font-bold p-2">Parroquia San Martin de Porres</p>
-
-    <p>
+    <p class="">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam rerum
       distinctio magni ullam minus dicta voluptate facilis eos maxime
     </p>
-
-    <a href="https://www.youtube.com/results?search_query=modificar+scroll+">
+    <a
+      class=""
+      href="https://www.youtube.com/results?search_query=modificar+scroll+">
       Maps</a
     >
   </div>
+</div>
 
-  <div class="w-1 bg-black h-1/2" id="line_Vertical"></div>
+<div class="flex gap-3 justify-center pb-2">
+  <CardHorario Act="Recepción " OClock="7pm " />
+
+  <div class="w-1 bg-black h-{250px}" id="line_Vertical"></div>
 
   <div class="card text-center">
     <p class="font-bold p-2">Parroquia San Martin de Porres</p>
@@ -31,7 +42,7 @@
 <style>
   .card {
     width: 220px;
-    height: 50%;
+    height: 250px;
     padding: 20px 10px;
     border-radius: 10px;
     backdrop-filter: blur(30px);
