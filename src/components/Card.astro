@@ -8,13 +8,11 @@ import CardHorario from "./CardHorario.astro";
 
   <div class="card text-center">
     <p class="font-bold p-2">Parroquia San Martin de Porres</p>
-    <p class="">
+    <p class="pb-2">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam rerum
       distinctio magni ullam minus dicta voluptate facilis eos maxime
     </p>
-    <a
-      class=""
-      href="https://www.youtube.com/results?search_query=modificar+scroll+">
+    <a class="btn" target="_blank" href="https://goo.gl/maps/p242XZfmz7vhqQeh8">
       Maps</a
     >
   </div>
@@ -27,13 +25,12 @@ import CardHorario from "./CardHorario.astro";
 
   <div class="card text-center">
     <p class="font-bold p-2">Parroquia San Martin de Porres</p>
-    <p class="">
+    <p class="pb-2">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam rerum
       distinctio magni ullam minus dicta voluptate facilis eos maxime
     </p>
-    <a
-      class=""
-      href="https://www.youtube.com/results?search_query=modificar+scroll+">
+
+    <a class="btn" target="_blank" href="https://goo.gl/maps/p242XZfmz7vhqQeh8">
       Maps</a
     >
   </div>
@@ -47,5 +44,21 @@ import CardHorario from "./CardHorario.astro";
     border-radius: 10px;
     backdrop-filter: blur(30px);
     background-color: rgba(65, 65, 65, 0.308);
+  }
+
+  .btn {
+    margin-bottom: 3em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 0.4s ease-in-out;
+    background-color: #000;
+    color: white;
+  }
+
+  .btn:hover {
+    background-color: rgb(17, 4, 134);
+    color: white;
   }
 </style>

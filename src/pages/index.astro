@@ -4,11 +4,10 @@ import Card from "../components/Card.astro";
 import Form from "../components/Form.astro";
 import Timer from "../components/Timer.astro";
 import MusicReproducer from "../components/MusicReproducer.astro";
-import Gallery from "../components/Gallery.astro";
 ---
 
 <Layout title="Boda">
-  <main class="container py-10 m-auto text-center text-white">
+  <main class="container pt-5 m-auto text-center text-white">
     <h1
       class="m-auto flex justify-center items-center text-5xl uppercase font-bold">
       <img src="/Heart.png" alt="heart.png" class="contrast-150 sm:px-2" />
@@ -17,20 +16,21 @@ import Gallery from "../components/Gallery.astro";
     </h1>
 
     <h2 class="text-2xl underline font-bold">Alice & David</h2>
-    <h2 class="text-2xl">
+    <h2 class="text-2xl pb-2">
       Están cordialmente invitados a la celebración de <span>nuestra boda</span>
     </h2>
 
-    <div class="flex justify-center items-center">
-      <img class="p-4 w-1/2 bg-cover" src="./amor.jpg" alt="love" />
-    </div>
+    <!--  <div class="flex justify-center items-center">
+      <img class="" src="./amor.jpg" alt="love" />
+    </div> -->
   </main>
 
   <div class="flex flex-col items-center justify-center m-auto p-12 text-white">
     <img class="filter grayscale invert" src="/loto.png" alt="loto" srcset="" />
-    <Timer />
+    <div class="timer">
+      <Timer />
+    </div>
 
-    <!--     <Gallery /> -->
     <img
       class="py-10 filter grayscale invert"
       src="/loto.png"
@@ -54,5 +54,13 @@ import Gallery from "../components/Gallery.astro";
       srcset=""
     />
     <Form />
+    <img
+      class="py-10 filter grayscale invert"
+      src="/loto.png"
+      alt="loto"
+      srcset=""
+    />
   </div>
 </Layout>
+
+<script src="../scripts/animation.js"></script>

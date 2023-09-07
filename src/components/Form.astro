@@ -26,7 +26,7 @@
   <textarea class="field resize-none" name="Mensaje" placeholder="Mensaje"
   ></textarea>
 
-  <button class="button3" type="submit">Enviar</button>
+  <button class="btn" type="submit">Enviar</button>
 </form>
 
 <style>
@@ -39,7 +39,6 @@
     padding-bottom: 0.4em;
     background-color: #171717;
     border-radius: 25px;
-    transition: 0.4s ease-in-out;
   }
 
   .field {
@@ -56,12 +55,6 @@
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
   }
 
-  .input-icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: white;
-  }
-
   .input-field {
     background: none;
     border: none;
@@ -70,49 +63,7 @@
     color: white;
   }
 
-  .form .btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 2.5em;
-  }
-
-  .button1 {
-    padding: 0.5em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    border-radius: 5px;
-    margin-right: 0.5em;
-    border: none;
-    outline: none;
-    transition: 0.4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-
-  .button1:hover {
-    background-color: black;
-    color: white;
-  }
-
-  .button2 {
-    padding: 0.5em;
-    padding-left: 2.3em;
-    padding-right: 2.3em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: 0.4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-
-  .button2:hover {
-    background-color: black;
-    color: white;
-  }
-
-  .button3 {
+  .btn {
     margin-bottom: 3em;
     padding: 0.5em;
     border-radius: 5px;
@@ -123,7 +74,7 @@
     color: white;
   }
 
-  .button3:hover {
+  .btn:hover {
     background-color: rgb(17, 4, 134);
     color: white;
   }
@@ -145,14 +96,14 @@
         "Por favor, selecciona una opción válida en el campo de Confirmación."
       );
       e.preventDefault(); // Evita que el formulario se envíe si no se ha seleccionado una opción válida
+    } else {
+      e.preventDefault();
+      fetch(scriptUrl, { method: "POST", body: new FormData(formulario) })
+        .then(() => alert("Your form is submitted successfully "))
+        .then(() => {
+          window.location.reload();
+        })
+        .catch((err) => console.error("Error", err.message));
     }
-
-    e.preventDefault();
-    fetch(scriptUrl, { method: "POST", body: new FormData(formulario) })
-      .then(() => alert("Your form is submitted successfully "))
-      .then(() => {
-        window.location.reload();
-      })
-      .catch((err) => console.error("Error", err.message));
   });
 </script>
