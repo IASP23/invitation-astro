@@ -9,5 +9,5 @@ export default defineConfig({
     host: true,
   },
   site: "https://IASP23.github.io",
-  base: "/Invitation-astro",
+  base: "/invitation-astro",
 });
