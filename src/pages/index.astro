@@ -25,7 +25,7 @@ import MusicReproducer from "../components/MusicReproducer.astro";
     </div> -->
   </main>
 
-  <div class="flex flex-col items-center justify-center m-auto p-12 text-white">
+  <div class="flex flex-col items-center justify-center m-auto text-white">
     <img class="filter grayscale invert" src="/loto.png" alt="loto" srcset="" />
     <div class="timer">
       <Timer />
@@ -38,7 +38,10 @@ import MusicReproducer from "../components/MusicReproducer.astro";
       srcset=""
     />
 
-    <Card title="Hola" body="Mundo" />
+    <div class="cards">
+      <Card />
+    </div>
+
     <img
       class="py-10 filter grayscale invert"
       src="/loto.png"
@@ -46,14 +49,20 @@ import MusicReproducer from "../components/MusicReproducer.astro";
       srcset=""
     />
 
-    <MusicReproducer />
+    <div class="music">
+      <MusicReproducer />
+    </div>
     <img
       class="py-10 filter grayscale invert"
       src="/loto.png"
       alt="loto"
       srcset=""
     />
-    <Form />
+
+    <div class="form">
+      <Form />
+    </div>
+
     <img
       class="py-10 filter grayscale invert"
       src="/loto.png"
