@@ -9,7 +9,7 @@
       <meta name="generator" content="Astro v3.0.5">
       <script src="https://unpkg.com/scrollreveal"></script>
       <title>Boda</title>
-      <link rel="stylesheet" href="invitation-astro/_astro/index.c5ecb475.css" />
+      <link rel="stylesheet" href="./invitation-astro/_astro/index.c5ecb475.css" />
       <script type="module">window.sr = ScrollReveal(); sr.reveal(".timer", { duration: 3e3, origin: "bottom", distance: "-100px" }); sr.reveal(".cards", { duration: 3e3, origin: "right", distance: "50px" }); sr.reveal(".music", { duration: 3e3, origin: "left", distance: "50px" }); sr.reveal(".form", { duration: 3e3, origin: "bottom", distance: "150px" }); const i = "https://script.google.com/macros/s/AKfycbyNWAVEBur-3NCmkS_erKQZzsAcbjZAYpr-ovU99tz6C1MWqSMkzruN9mr9s8J6mL-P/exec", r = document.getElementById("MiFormulario"); r.addEventListener("submit", e => { const o = document.getElementById("opcion").value; console.log(o), o === "" ? (alert("Por favor, selecciona una opción válida en el campo de Confirmación."), e.preventDefault()) : (e.preventDefault(), fetch(i, { method: "POST", body: new FormData(r) }).then(() => alert("Your form is submitted successfully ")).then(() => { window.location.reload() }).catch(t => console.error("Error", t.message))) });
       </script>
 </head>
