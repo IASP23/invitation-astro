@@ -1,5 +1,5 @@
 <form class="form" method="POST" id="MiFormulario">
-  <p class="text-2xl text-white p-5 font-semibold">Confirma tu Asistencia</p>
+  <p class="text-2xl text-white p-5 font-semibold">Confirmar Asistencia</p>
   <div class="field">
     <input
       placeholder="Nombre"
@@ -26,8 +26,9 @@
   <textarea class="field resize-none" name="Mensaje" placeholder="Mensaje"
   ></textarea>
 
-  <button class="btn" type="submit">Enviar</button>
+  <button class="btn hover:contrast-125" type="submit">Enviar Respuesta</button>
 </form>
+
 
 <style>
   .form {
@@ -37,6 +38,7 @@
     padding-left: 3em;
     padding-right: 3em;
     padding-bottom: 0.4em;
+    width: 80vh;
     background-color: #171717;
     border-radius: 25px;
   }
@@ -72,15 +74,15 @@
     transition: 0.4s ease-in-out;
     background-color: #252525;
     color: white;
+    background-color: #0A2472;
   }
 
-  .btn:hover {
-    background-color: rgb(17, 4, 134);
-    color: white;
-  }
 </style>
 
 <script>
+
+import Swal from 'sweetalert2'
+
   const scriptUrl =
     "https://script.google.com/macros/s/AKfycbyNWAVEBur-3NCmkS_erKQZzsAcbjZAYpr-ovU99tz6C1MWqSMkzruN9mr9s8J6mL-P/exec";
 
@@ -92,14 +94,22 @@
 
     console.log(seleccion);
     if (seleccion === "") {
-      alert(
-        "Por favor, selecciona una opción válida en el campo de Confirmación."
-      );
+      Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Asegurate de revisar tu confirmación',
+})
       e.preventDefault(); // Evita que el formulario se envíe si no se ha seleccionado una opción válida
     } else {
       e.preventDefault();
       fetch(scriptUrl, { method: "POST", body: new FormData(formulario) })
-        .then(() => alert("Your form is submitted successfully "))
+        .then(() => 
+        Swal.fire(
+  'Genial!',
+  'Muchas gracias por tu respuesta',
+  'success'
+)
+)
         .then(() => {
           window.location.reload();
         })

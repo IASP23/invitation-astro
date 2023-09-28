@@ -8,6 +8,4 @@ export default defineConfig({
   server: {
     host: true,
   },
-  site: "https://IASP23.github.io",
-  base: "/invitation-astro",
 });
