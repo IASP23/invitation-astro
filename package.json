@@ -7,14 +7,14 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "gh-pages -d dist"
-  },
+    "astro": "astro"
+    },
   "dependencies": {
+    "@astrojs/netlify": "^3.0.2",
     "@astrojs/react": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.0.5",
-    "sweetalert2": "^11.6.13",
+    "sweetalert2": "^11.7.31",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
