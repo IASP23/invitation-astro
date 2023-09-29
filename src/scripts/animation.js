@@ -2,13 +2,13 @@ window.sr = ScrollReveal();
 
 sr.reveal(".temporizer", {
   duration: 3000,
-  origin: "right",
+  origin: "left",
   distance: "-100px",
 });
 
 sr.reveal(".timer", {
   duration: 3000,
-  origin: "bottom",
+  origin: "left",
   distance: "-100px",
 });
 
@@ -20,7 +20,7 @@ sr.reveal(".cards", {
 
 sr.reveal(".gallery", {
   duration: 3000,
-  origin: "right",
+  origin: "left",
   distance: "50px",
 });
 
@@ -32,7 +32,7 @@ sr.reveal(".dressCode", {
 
 sr.reveal(".form", {
   duration: 3000,
-  origin: "right",
+  origin: "top",
   distance: "150px",
 });
 

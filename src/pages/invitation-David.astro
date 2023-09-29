@@ -7,32 +7,30 @@ import Temporizer from "../components/Temporizer.astro";
 import Gallery from "../components/Gallery.astro";
 ---
 
+<style></style>
 <Layout title="Boda">
-  <div class="min-h-screen flex items-center justify-center">
+  <main class="relative flex justify-center text-white h-[100vh]">
     <img
-      src="main_photo.webp"
-      alt="Imagen adaptativa"
-      class="max-w-full h-auto"
+      src="/main_photo.webp"
+      alt="Imagen"
+      class="w-full h-full object-cover"
+      height="912"
+      width="1368"
     />
-  </div>
 
-  <div
-    class="bg-cover w-full min-h-[100vh]"
-    style="background-image: url(./main_photo.webp);">
-    <main class="p-5">
-      <h1 class="m-auto text-6xl uppercase">Nos casamos</h1>
+    <h1 class="py-10 absolute text-4xl md:text-6xl uppercase">Nos casamos</h1>
 
-      <h2 class="text-4xl">Alice & David</h2>
-    </main>
-  </div>
+    <h2 class="absolute py-56 text-3xl">Alice & David</h2>
+  </main>
 
   <div class="py-5 flex flex-col items-center justify-center gap-3 text-center">
     <div class="temporizer">
       <h2 class="text-4xl">Estás invitado</h2>
       <p>Queremos que seas parte de este momento tal especial !</p>
     </div>
-    <Temporizer />
     <div class="timer">
+      <Temporizer />
+
       <Timer />
     </div>
 
@@ -79,3 +77,5 @@ import Gallery from "../components/Gallery.astro";
     </footer>
   </div>
 </Layout>
+
+<script src="../scripts/animation.js"></script>
