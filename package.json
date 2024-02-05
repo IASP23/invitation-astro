@@ -13,6 +13,7 @@
     "@astrojs/netlify": "^3.0.2",
     "@astrojs/react": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
+    "@hotjar/browser": "^1.0.9",
     "astro": "^3.0.5",
     "sweetalert2": "^11.7.31",
     "tailwindcss": "^3.3.3"
